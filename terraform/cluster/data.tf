@@ -29,9 +29,10 @@ data "vsphere_virtual_machine" "template" {
 
 data "ct_config" "ignition" {
   content = templatefile("${path.module}/ignition.yaml.tftpl",{
-    dns1 = "1.1.1.1"
-    dns2 = "8.8.8.8"
+    hostname = "DAC"
     ipv4 = "192.168.2.22/24"
     gw4 = "192.168.2.1"
+    dns1 = "1.1.1.1"
+    dns2 = "8.8.8.8"
   })
 }
