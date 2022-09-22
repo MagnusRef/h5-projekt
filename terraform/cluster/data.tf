@@ -1,29 +1,24 @@
 data "vsphere_datacenter" "datacenter" {
-  name = "Datacenter"
+  name = var.vcs.dc
 }
 
 data "vsphere_datastore" "datastore" {
-  name          = "datastore1"
+  name          = var.vcs.ds
   datacenter_id = data.vsphere_datacenter.datacenter.id
 }
 
 data "vsphere_compute_cluster" "cluster" {
-  name          = "cluster"
-  datacenter_id = data.vsphere_datacenter.datacenter.id
-}
-
-data "vsphere_host" "host" {
-  name          = "192.168.2.11"
+  name          = var.vcs.cl
   datacenter_id = data.vsphere_datacenter.datacenter.id
 }
 
 data "vsphere_network" "network" {
-  name          = "VM Network"
+  name          = var.vcs.pg 
   datacenter_id = data.vsphere_datacenter.datacenter.id
 }
 
 data "vsphere_virtual_machine" "template" {
-  name          = "flatcar-template"
+  name          = var.vcs.tpl 
   datacenter_id = data.vsphere_datacenter.datacenter.id
 }
 
