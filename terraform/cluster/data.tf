@@ -23,11 +23,12 @@ data "vsphere_virtual_machine" "template" {
 }
 
 data "ct_config" "ignition" {
+  for_each = {for vm in var.vms: vm.hostname => vm}
   content = templatefile("${path.module}/ignition.yaml.tftpl",{
-    hostname = "DAC"
-    ipv4 = "192.168.2.22/24"
-    gw4 = "192.168.2.1"
-    dns1 = "1.1.1.1"
-    dns2 = "8.8.8.8"
+    hostname = "${each.value.hostname}"
+    ipv4 = "${each.value.ip}"
+    gw4 = "${each.value.gw}"
+    dns1 = "${each.value.dns1}"
+    dns2 = "${each.value.dns2}"
   })
 }
