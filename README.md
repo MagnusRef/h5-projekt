@@ -1,2 +1,6 @@
 # h5-projekt
-H5 projekt cloud
+TEC Ballerup - Datatekniker med speciale i infrastruktur - H5 projekt cloud
+
+on-prem kubernetes using the following:
+* terraform - for provisioning VMs in Vsphere.
+* TBA
