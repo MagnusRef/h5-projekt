@@ -15,9 +15,9 @@ variable "vcs" {
   type = map(any)
   default = {
     ds  = "vsanDatastore"
-    cl  = "NS-CL-01"
-    dc  = "NS-DC-01"
-    pg  = "DMZ"
+    cl  = "NS-VMCL-01"
+    dc  = "NS-VMDC-01"
+    pg  = "DMZ (VLAN 100)"
     tpl = "flatcar template"
   }
 }
@@ -28,8 +28,8 @@ variable "vms" {
     {
       hostname = "NS-K8SCPL-01"
       fqdn     = "ns-k8scpl-01.l1-nak.local"
-      cpu      = 2
-      ram      = 2048
+      cpu      = 4
+      ram      = 4096
       ip       = "10.2.100.10/24"
       gw       = "10.2.100.1"
       dns1     = "10.2.90.10"
@@ -39,7 +39,7 @@ variable "vms" {
       hostname = "NS-K8SWRK-01"
       fqdn     = "ns-k8swrk-01.l1-nak.local"
       cpu      = 4
-      ram      = 4096
+      ram      = 8192
       ip       = "10.2.100.11/24"
       gw       = "10.2.100.1"
       dns1     = "10.2.90.10"
@@ -49,7 +49,7 @@ variable "vms" {
       hostname = "NS-K8SWRK-02"
       fqdn     = "ns-k8swrk-02.l1-nak.local"
       cpu      = 4
-      ram      = 4096
+      ram      = 8192
       ip       = "10.2.100.12/24"
       gw       = "10.2.100.1"
       dns1     = "10.2.90.10"
@@ -59,7 +59,7 @@ variable "vms" {
       hostname = "NS-K8SWRK-03"
       fqdn     = "ns-k8swrk-03.l1-nak.local"
       cpu      = 4
-      ram      = 4096
+      ram      = 8192
       ip       = "10.2.100.13/24"
       gw       = "10.2.100.1"
       dns1     = "10.2.90.10"

@@ -1,0 +1,40 @@
+all:
+  hosts:
+    ns-k8scpl-01.l1-nak.local:
+      ansible_host: 10.2.100.10
+      ip: 10.2.100.10
+      access_ip: 10.2.100.10
+    ns-k8swrk-01.l1-nak.local:
+      ansible_host: 10.2.100.11
+      ip: 10.2.100.11
+      access_ip: 10.2.100.11
+    ns-k8swrk-02.l1-nak.local:
+      ansible_host: 10.2.100.12
+      ip: 10.2.100.12
+      access_ip: 10.2.100.12
+    ns-k8swrk-03.l1-nak.local:
+      ansible_host: 10.2.100.13
+      ip: 10.2.100.13
+      access_ip: 10.2.100.13
+  children:
+    kube_control_plane:
+      hosts:
+        ns-k8scpl-01.l1-nak.local:
+    kube_node:
+      hosts:
+        ns-k8swrk-01.l1-nak.local:
+        ns-k8swrk-02.l1-nak.local:
+        ns-k8swrk-03.l1-nak.local:
+    etcd:
+      hosts:
+        ns-k8scpl-01.l1-nak.local:
+    k8s_cluster:
+      vars:
+        # flatcar options
+        bin_dir: /opt/bin
+        ansible_python_interpreter: /opt/bin/python
+      children:
+        kube_control_plane:
+        kube_node:
+    calico_rr:
+      hosts: {}
