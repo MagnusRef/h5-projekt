@@ -28,7 +28,7 @@ variable "vms" {
     {
       hostname = "NS-K8SCPL-01"
       fqdn     = "ns-k8scpl-01.l1-nak.local"
-      cpu      = 2
+      cpu      = 4
       ram      = 4096
       ip       = "10.2.100.10/24"
       gw       = "10.2.100.1"
