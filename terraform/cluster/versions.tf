@@ -9,11 +9,10 @@ terraform {
       version = "0.11.0"
     }
   }
-  backend "azurerm" {
-    resource_group_name  = "l1-nak-tf-backend-rg"
-    storage_account_name = "nakskovtfstate"
-    container_name       = "tfstate"
-    key                  = "terraform.tfstate"
+  backend "s3" {
+    bucket    = "l1-nak-terraform-backend"
+    key       = "terraform.tfstate"
+    region    = "eu-north-1"
   }
 }
 
