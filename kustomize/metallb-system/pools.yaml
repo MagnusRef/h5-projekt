@@ -4,4 +4,4 @@ metadata:
   name: dmz
 spec:
   addresses:
-  - 10.2.100.128/25
+  - "10.2.100.100-10.2.100.120"
