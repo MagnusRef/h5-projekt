@@ -33,6 +33,9 @@ all:
         # flatcar options
         bin_dir: /opt/bin
         ansible_python_interpreter: /opt/bin/python
+        upstream_dns_servers:
+          - 10.2.90.10
+          - 10.2.90.11
       children:
         kube_control_plane:
         kube_node:
