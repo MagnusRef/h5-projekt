@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: webapp
-  name: webapp
+    app: test
+  name: test
 spec:
-  replicas: 9
+  replicas: 3
   selector:
     matchLabels:
-      app: webapp
+      app: test
   template:
     metadata:
       labels:
-        app: webapp
+        app: test
     spec:
       containers:
-      - image: nginx
+      - image: stenote/nginx-hostname
         name: nginx

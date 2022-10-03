@@ -1,0 +1,12 @@
+apiVersion: v1
+data:
+  index.html: "<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<title>L1 Nakskov</title>\n\t\t<link
+    rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css\"
+    integrity=\"sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm\"
+    crossorigin=\"anonymous\">\n\t</head>\n\t<body>\n\t\t<div class=\"jumbotron jumbotron-fluid\">\n\t\t\t<div
+    class=\"container\">\n\t\t\t\t<h1 class=\"display-4 text-primary\">L1 Nakskov</h1>\n\t\t\t\t<p
+    class=\"lead text-danger\">Hjemmeside for L1-nakskov.local</p>\n\t\t\t\t<p class=\"text-info\">hosted
+    on kubernetes!</p>\n\t\t\t</div>\n\t\t</div>\n\t</body>\n</html>\n"
+kind: ConfigMap
+metadata:
+  name: homepage-html
