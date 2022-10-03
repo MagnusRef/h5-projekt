@@ -39,6 +39,7 @@ passwd:
         - name: ENC[AES256_GCM,data:mjfBqw==,iv:aAod0fllRsNpVoa1SPbo3KuNEaBRow6DmL9uETDHrVo=,tag:Zj7NFJZvq1cbWulKUcgPzg==,type:str]
           ssh_authorized_keys:
             - ENC[AES256_GCM,data:m/Ecer4VXpQXP/zdAendc58Dbn6KARV+/Xvi07f5ucRqjlSkHGAntirrS+pdxWqhnPoIxz2J8vEQ3WoC7nHHvriqPAy8IwcKdG8ayrjn1vw8bXaYSU9VprUTZG5URw==,iv:fezOL6fBnahsW6Pp9WNmrUdrbhoMqspk+QAm/7w27BU=,tag:X/N359IARRE/zY52YY4rDA==,type:str]
+            - ENC[AES256_GCM,data:E6YnifOirBKwkiOu+cxU1MBtZIp2u4QCZgkvXbLX/cm9L/ZORDGGB1oFypNoj45RS6/D5frb0HEqV6irMkwsqVjqO9umvIv/8AIxTB3TRv7bRNZ4JbTXgUzpQkDK,iv:7XHC+gJ6Ee5kV3Wgu9iNcsLt25OxFizZpeXnPuG0bx8=,tag:93dbsrvbznTf0cDgSc86Yg==,type:str]
 sops:
     kms: []
     gcp_kms: []
@@ -54,8 +55,8 @@ sops:
             TkF6T2hEbWV0WHNCSEJrajlKRDVMeUEK4eIpjmYAEwEKkI8QqGqjHF4HPzuG4I7h
             C2l2ZoH9yari88YRelKOrbsLeWaHwmyvjWFQzQ543+SGA/W+KhN3oQ==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2022-10-01T13:01:32Z"
-    mac: ENC[AES256_GCM,data:+97yLAN83ruJwu13WAINeUTjRguXOuHo/D1fuJlhBOLzsShXiip/Mpm974uw2v5aoAVnIYd3CL/mgaycdnlDUmWeaabqTmkwS6p0NAgsz7ktAuX/sbXmityOxNtysO8alzkil/FZPKtJpTDcs4sm8+xngqRrrkC6G6dNvmj6De4=,iv:jUH1M7IOrg25D/m5EQMFKK+O4aGvNC1Gu9PzPUFmCVE=,tag:KR/IKWJEm8qCVHUACRPYqA==,type:str]
+    lastmodified: "2022-10-03T20:46:59Z"
+    mac: ENC[AES256_GCM,data:AWBwdS6MV7+5DSl9eiYS+DiEUPprUSMnwN8eLfzQm5ZZ6oBIgw6BqhO7NAilMZLp4lrTJIWFcmCG4xtpiWoqpaZ8dRO5O5p19OYF4pe2PjaNDtE6iDf0C22ITmOpyqM7Vtz5I30vxWCjI6Rqs5f4oTUmEyyay9UXH6ZUEVMJqmA=,iv:9/qBfVBjzYr0EuUJR4nhuWvvkjwuVciXNcfPcOs+lrs=,tag:gLdXdU4VicnsGkd/1E2wLQ==,type:str]
     pgp: []
     unencrypted_suffix: _unencrypted
     version: 3.7.3
